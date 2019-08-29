@@ -1,23 +1,3 @@
-// ------------------------------------------------
-// Table of Contents
-// ------------------------------------------------
-//
-//  1. Loader
-//  2. Main Section Loading Animation
-//  3. Animated Headline Settings
-//  4. Fullscreen Layout
-//  5. YTPlayer Settings
-//  6. Vegas Settings
-//  7. KBW-Countdown Settings
-//  8. Custom Scrollbar Settings
-//  9. Mailchimp Notify Form
-//  10. Contact Form
-//  11. ParticlesJS Backgrounds
-//
-// ------------------------------------------------
-// Table of Contents End
-// ------------------------------------------------
-
 $(window).on("load", function() {
   "use strict";
 
