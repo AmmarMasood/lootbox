@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Page Title-->
+    <title>LootBox - Subscription box service</title>
+
+    <!-- Template Favicon & Icons Start -->
+    <link rel="shortcut icon" type="image/png" href="./img/favicon/ms-icon-310x310.png">
+    
+    <script>
+      !(function(e) {
+        "use strict";
+        function t(e, t, n) {
+          e.addEventListener
+            ? e.addEventListener(t, n, !1)
+            : e.attachEvent && e.attachEvent("on" + t, n);
+        }
+        function n(t, n) {
+          return (
+            e.localStorage &&
+            localStorage[t + "_content"] &&
+            localStorage[t + "_file"] === n
+          );
+        }
+        function a(t, a) {
+          if (e.localStorage && e.XMLHttpRequest)
+            n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+          else {
+            var s = r.createElement("link");
+            (s.href = a),
+              (s.id = t),
+              (s.rel = "stylesheet"),
+              (s.type = "text/css"),
+              r.getElementsByTagName("head")[0].appendChild(s),
+              (r.cookie = t);
+          }
+        }
+        function l(e, t) {
+          var n = new XMLHttpRequest();
+          n.open("GET.html", t, !0),
+            (n.onreadystatechange = function() {
+              4 === n.readyState &&
+                200 === n.status &&
+                (o(n.responseText),
+                (localStorage[e + "_content"] = n.responseText),
+                (localStorage[e + "_file"] = t));
+            }),
+            n.send();
+        }
+        function o(e) {
+          var t = r.createElement("style");
+          t.setAttribute("type", "text/css"),
+            r.getElementsByTagName("head")[0].appendChild(t),
+            t.styleSheet ? (t.styleSheet.cssText = e) : (t.innerHTML = e);
+        }
+        var r = e.document;
+        (e.loadCSS = function(e, t, n) {
+          var a,
+            l = r.createElement("link");
+          if (t) a = t;
+          else {
+            var o;
+            (o = r.querySelectorAll
+              ? r.querySelectorAll("style,link[rel=stylesheet],script")
+              : (r.body || r.getElementsByTagName("head")[0]).childNodes),
+              (a = o[o.length - 1]);
+          }
+          var s = r.styleSheets;
+          (l.rel = "stylesheet"),
+            (l.href = e),
+            (l.media = "only x"),
+            a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+          var c = function(e) {
+            for (var t = l.href, n = s.length; n--; )
+              if (s[n].href === t) return e();
+            setTimeout(function() {
+              c(e);
+            });
+          };
+          return (
+            (l.onloadcssdefined = c),
+            c(function() {
+              l.media = n || "all";
+            }),
+            l
+          );
+        }),
+          (e.loadLocalStorageCSS = function(l, o) {
+            n(l, o) || r.cookie.indexOf(l) > -1
+              ? a(l, o)
+              : t(e, "load", function() {
+                  a(l, o);
+                });
+          });
+      })(this);
+
+      
+    </script>
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function End-->
+
+    <!-- Load Fonts CSS Start-->
+    <script>
+      loadCSS("css/fonts.min8a54.css?ver=1.0.0", false, "all"); // Loading fonts, if the site is located in a subfolder
+    </script>
+    <!-- Load Fonts CSS End-->
+
+    <!-- Load Custom CSS Start-->
+    <script>
+      loadCSS("css/main.min8a54.css?ver=1.0.0", false, "all");
+      loadCSS("css/colors/color-3.min8a54.css?ver=1.0.0", false, "all");
+    </script>
+    <!-- Load Custom CSS End-->
+
+    <!-- Load Custom CSS Compiled without JS Start-->
+    <noscript>
+      <link rel="stylesheet" href="css/fonts.min.css" />
+      <link rel="stylesheet" href="css/main.min.css" />
+      <link rel="stylesheet" href="css/colors/color-3.min.css" />
+    </noscript>
+    <!-- Load Custom CSS Compiled without JS End-->
+
+    <!-- Custom Browser Color Start-->
+    <meta name="theme-color" content="#333b8f" />
+    <meta name="msapplication-navbutton-color" content="#333b8f" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#333b8f" />
+    <!-- Custom Browser Color End-->
+  </head>
+
+  <body>
+    <!-- Loader Start-->
+    <div class="loader">
+      <div class="loader-content">
+        <div class="loader-logo slideInDown">
+          <!-- Your Logo Here -->
+          <img src="img/lootbox-loader-logo.png" alt="lootbox" />
+        </div>
+        <div class="loader-caption slideInUp">
+          <span class="loading-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- Loader End-->
+
+    <!-- Custom HTML Start-->
+
+    <!-- Main Screen Section Start-->
+    <section id="main" class="main">
+      <div class="container-fluid fullheight">
+        <!-- Main Section Intro Start -->
+        <div class="main-intro col-xs-12 col-lg-6">
+          <div class="intro-content">
+            <!-- Logo Start-->
+            <div class="logo">
+              <img
+                src="img/lootbox-logo-light.png"
+                alt="Ramio - clean coming soon & landing page template"
+              />
+            </div>
+            <!-- Logo End-->
+
+            <!-- Main Menu Start -->
+            <div class="menu">
+              <nav>
+                <ul>     
+                  <li><a href="#" id="works-trigger">Boxes</a></li>
+                  <li><a href="#" id="about-trigger">About us</a></li>
+                  <li><a href="#" id="contact-trigger">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Main Menu End -->
+
+            <!-- Socials Start -->
+            <div class="socials">
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <i class="icon ion-social-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" target="_blank">
+                    <i class="icon ion-social-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://dribbble.com/" target="_blank">
+                    <i class="icon ion-social-dribbble-outline"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/" target="_blank">
+                    <i class="icon ion-social-github"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Socials End -->
+
+            <!-- Main Headline Start -->
+            <div class="headline">
+              <!-- Headline Content Start -->
+              <h1 class="txt-light">
+                Pakistan's
+                <br />
+                <span>First</span> Geek Subscription Box Service
+              </h1>
+              <p class="headline-text txt-light">
+                We are preparing something amazing and exciting for you. Subscibe to our notifications and vote for
+                your favourite theme of our very first release!
+              </p>
+              <a
+                href="#"
+                class="btn btn-l btn-light-outline"
+                id="notify-trigger"
+              >
+                <span class="btn-caption">Subscribe Now</span>
+              </a>
+           
+             
+              <!-- Headline Content End -->
+            </div>
+            <!-- Main Headline End -->
+          </div>
+        </div>
+        <!-- Main Section Intro End -->
+
+        <!-- Main Section Media Start -->
+        <div class="main-media col-xs-12 col-lg-6">
+          <!-- Main Section Image & Background Effect Start -->
+
+
+          <div class="image">
+            <!-- Background Effect Start -->
+            <img src="./img/gallery/uriel-soberanes-MxVkWPiJALs-unsplash.jpg" alt="">
+            <div class="fullscreen">
+              <div id="bgndKenburns"></div>
+            </div>
+
+            <div class="fullscreen">
+              <div id="bgndKenburns-color-3"></div>
+            </div>
+            
+            <!-- Background Effect End -->
+
+            <!-- Color Layer Start -->
+            <div class="layer-black"></div>
+            <!-- Color Layer End -->
+
+            <!-- Countdown Start-->
+            <div class="countdown">
+              <div id="countdown"></div>
+              <span class="help-text">Days to Launch</span>
+            </div>
+            <!-- Countdown End-->
+          </div>
+          <!-- Main Section Image & Background Effect End -->
+        </div>
+        <!-- Main Section Media End -->
+      </div>
+    </section>
+    <!-- Main Screen Section End-->
+
+    <!-- About Us Section Start-->
+    <section id="about" class="content-section about">
+      <div class="container-fluid fullheight">
+        <!-- About Info Scroll Start-->
+        <div class="scroll scroll-left about-info">
+          <div class="blocks-container">
+            <!-- Close Button Start -->
+            <div class="section-controls">
+              <a href="#0" id="about-close" class="section-close">
+                <i class="icon ion-android-arrow-back"></i>
+              </a>
+            </div>
+            <!-- Close Button End -->
+
+            <!-- Section Title Start -->
+            <div class="content-block section-title">
+              <h2>
+                About us
+              </h2>
+              <!-- <span>Just awesome <em>template</em></span> -->
+              <p>
+                  Loot Box is Pakistan's first subscribtion box service. We know how much Pakistanis love their fandoms and that is why we strive to deliver consistent, "fan-tastic” experiences around all of our products.
+                  We're a company run by fans. We unabashedly celebrate nostalgic moments and characters — from famous heroes to infamous villains, and everyone inbetween. 
+                  <br>
+                  We aspire to earn (and keep!) your trust by providing you with reliable and accountable service.
+                  Everything we builtincluding themes is so you can fully immerse yourself in the stuff you love!
+                  We will be realeasing our very first lootbox this year. So subscribe to our notifications and stay tuned. 
+              </p>
+            </div>
+            <!-- Section Title End -->
+
+          </div>
+        </div>
+        <!-- About Info Scroll End-->
+
+        <!-- About Single Photo Static Start-->
+        <div
+          class="static about-photo fullheight"
+          style="background-image:url(./img/gallery/jase-ess-g4aiU4mEsZM-unsplash.jpg);"
+        ></div>
+        <!-- About Single Photo Static End-->
+      </div>
+    </section>
+    <!-- About Us Section End-->
+
+    <!-- Our Works Section Start-->
+    <section id="works" class="content-section works">
+      <div class="container-fluid fullheight">
+        <!-- Works Info Scroll Start-->
+        <div class="scroll scroll-left works-info">
+          <div class="blocks-container">
+            <!-- Close Button Start -->
+            <div class="section-controls">
+              <a href="#0" id="works-close" class="section-close">
+                <i class="icon ion-android-arrow-back"></i>
+              </a>
+            </div>
+            <!-- Close Button End -->
+
+            <!-- Section Title Start -->
+            <div class="content-block section-title">
+              <h2>
+                Loot Boxes
+              </h2>
+              <!-- <span>Team and latest <em>projects</em></span> -->
+              <p>
+                Whether you’re a gamer, comics fan or pop culture aficionado, 
+                we’ve got a lootbox for you! We make a bundle of collectibles, apparel, 
+                figures & more that you can’t get anywhere else! Boxes get delivered to your 
+                door every month. What you get is a surprise until you open it!
+              </p>
+            </div>
+            <!-- Section Title End -->
+          </div>
+        </div>
+        <!-- Works Info Scroll End-->
+
+        <!-- Works Gallery Static Start-->
+        <div class="static works-gallery fullheight">
+          <!-- Works Gallery Start -->
+          <div class="gallery">
+            <div
+              class="my-gallery"
+              itemscope
+              itemtype="http://schema.org/ImageGallery"
+            >
+              <!-- Works Gallery Single Item Start -->
+              <figure
+                class="col-xs-12 col-sm-6"
+                itemprop="associatedMedia"
+                itemscope
+                itemtype="http://schema.org/ImageObject"
+              >
+                <a
+                  href="./img/gallery/pop-fig-2.jpg"
+                  data-image="./img/gallery/pop-fig-2.jpg"
+                  class="works-link"
+                  itemprop="contentUrl"
+                  data-size="900x1200"
+                >
+                  <img
+                    src="./img/gallery/pop-fig-2.jpg"
+                    class="works-image"
+                    itemprop="thumbnail"
+                    alt="Image description"
+                  />
+                </a>
+                <figcaption
+                  class="works-description"
+                  itemprop="caption description"
+                >
+                  <h4>
+                    Pop Culture
+                    <small>Get the latest and the most trendiest items in pop culture.</small>
+                  </h4>
+                  <p>
+                    Mauris porttitor lobortis ligula, quis molestie lorem
+                    scelerisque eu. Morbi aliquam enim odio, a mollis ipsum
+                    tristique eu.
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+              <!-- Works Gallery Single Item Start -->
+              <figure
+                class="col-xs-12 col-sm-6"
+                itemprop="associatedMedia"
+                itemscope
+                itemtype="http://schema.org/ImageObject"
+              >
+                <a
+                  href="./img/gallery/comics-mc.jpg"
+                  class="works-link"
+                  data-image="./img/gallery/comics-mc.jpg"
+                  itemprop="contentUrl"
+                  data-size="900x1200"
+                >
+                  <img
+                    src="./img/gallery/comics-mc.jpg"
+                    class="works-image"
+                    itemprop="thumbnail"
+                    alt="Image description"
+                  />
+                </a>
+                <figcaption
+                  class="works-description"
+                  itemprop="caption description"
+                >
+                  <h4>
+                   Comics
+                    <small>Get the latest items from comics world</small>
+                  </h4>
+                  <p>
+                    Mauris porttitor lobortis ligula, quis molestie lorem
+                    scelerisque eu.
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+              <!-- Works Gallery Single Item Start -->
+              <figure
+                class="col-xs-12 col-sm-6"
+                itemprop="associatedMedia"
+                itemscope
+                itemtype="http://schema.org/ImageObject"
+              >
+                <a
+                  href="./img/gallery/gaming-1.jpg"
+                  class="works-link"
+                  data-image="./img/gallery/gaming-1.jpg"
+                  itemprop="contentUrl"
+                  data-size="900x1200"
+                >
+                  <img
+                    src="./img/gallery/gaming-1.jpg"
+                    class="works-image"
+                    itemprop="thumbnail"
+                    alt="Image description"
+                  />
+                </a>
+                <figcaption
+                  class="works-description"
+                  itemprop="caption description"
+                >
+                  <h4>
+                    Gaming
+                    <small>Get items from latest and top games</small>
+                  </h4>
+                  <p>
+                    Mauris porttitor lobortis ligula, quis molestie lorem
+                    scelerisque eu. Morbi aliquam enim odio, a mollis ipsum
+                    tristique eu.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit tenetur atque minima ut? Officia enim atque iusto fugiat eius odio, sed laboriosam delectus, recusandae, quos quia excepturi consectetur quam!
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+              <!-- Works Gallery Single Item Start -->
+              <figure
+                class="col-xs-12 col-sm-6"
+                itemprop="associatedMedia"
+                itemscope
+                itemtype="http://schema.org/ImageObject"
+              >
+                <a
+                  href="./img/gallery/shows-1.jpg"
+                  class="works-link"
+                  data-image="./img/gallery/shows-1.jpg"
+                  itemprop="contentUrl"
+                  data-size="900x1200"
+                >
+                  <img
+                    src="./img/gallery/shows-1.jpg"
+                    class="works-image"
+                    itemprop="thumbnail"
+                    alt="Image description"
+                  />
+                  <div class="overlay"></div>
+                </a>
+                <figcaption
+                  class="works-description"
+                  itemprop="caption description"
+                >
+                  <h4>
+                    Harry Potter Wizarding World
+                    <small>Get Harry Potter collectibles and merch</small>
+                  </h4>
+                  <p>
+                    Mauris porttitor lobortis ligula, quis molestie lorem
+                    scelerisque eu. Morbi aliquam enim odio, a mollis ipsum
+                    tristique eu.
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+            </div>
+          </div>
+          <!-- Works Gallery End -->
+        </div>
+        <!-- Works Gallery Static End-->
+      </div>
+    </section>
+    <!-- Our Works Section End-->
+
+    <!-- Contact Section Start-->
+    <section id="contact" class="content-section contact">
+      <div class="container-fluid fullheight">
+        <!-- Contact Info & Form Scroll Start-->
+        <div class="scroll scroll-left contact-info">
+          <div class="blocks-container">
+            <!-- Close Button Start -->
+            <div class="section-controls">
+              <a href="#0" id="contact-close" class="section-close">
+                <i class="icon ion-android-arrow-back"></i>
+              </a>
+            </div>
+            <!-- Close Button End -->
+
+            <!-- Section Title Start -->
+            <div class="content-block section-title">
+              <h2>
+                Get in touch
+              </h2>
+              <!-- <span>Welcome to our <em>new office</em></span> -->
+              <p class="text-m">
+                
+                Our website is under construction but we will be launching very soon! You
+                can call us or leave a request here. We are always glad to see
+                you!
+              </p>
+            </div>
+            <!-- Section Title End -->
+
+            <!-- Contact Data Info Start -->
+            <div class="content-block contact-data">
+              <div class="row">
+                <!-- Contact Data Single Item Start -->
+                <!-- <div class="col-xs-12 col-sm-6 contact-data-item">
+                  <i class="icon ion-ios-location"></i>
+                  <p>
+                    11 West 53 Street
+                    <br />New York, NY <br />10019
+                  </p>
+                </div> -->
+                <div class="col-xs-12 col-sm-6 contact-data-item">
+                    <i class="icon ion-edit"></i>
+                    <p>
+                      <a
+                        href="mailto:example@example.com?subject=Message%20from%20your%20site"
+                        >example@example.com</a
+                      >
+                    </p>
+                  </div>
+                <!-- Contact Data Single Item End -->
+
+                <!-- Contact Data Single Item Start -->
+                <div class="col-xs-12 col-sm-6 contact-data-item">
+                  <i class="icon ion-android-share-alt"></i>
+                  <ul>
+                    <li>
+                      <a href="https://www.facebook.com/" target="_blank"
+                        >Facebook</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/" target="_blank">Twitter</a>
+                    </li>
+                    <li>
+                      <a href="https://dribbble.com/" target="_blank"
+                        >Instagram</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Contact Data Single Item End -->
+              </div>
+
+              <div class="row">
+                <!-- Contact Data Single Item Start -->
+                <div class="col-xs-12 col-sm-6 contact-data-item">
+                  <i class="icon ion-android-call"></i>
+                  <p>
+                    <a href="tel:+12127089400">+92 xxx xxxxxxxx</a>
+                  </p>
+                </div>
+                <!-- Contact Data Single Item End -->
+
+                <!-- Contact Data Single Item Start -->
+                <!-- <div class="col-xs-12 col-sm-6 contact-data-item">
+                  <i class="icon ion-edit"></i>
+                  <p>
+                    <a
+                      href="mailto:example@example.com?subject=Message%20from%20your%20site"
+                      >example@example.com</a
+                    >
+                  </p>
+                </div> -->
+                <!-- Contact Data Single Item End -->
+              </div>
+            </div>
+            <!-- Contact Data Info End -->
+
+            <!-- <div class="contact-buttons">
+              <a href="#" class="btn btn-l btn-dark" id="contactform-trigger">
+                <span class="btn-caption">Write a line</span>
+              </a>
+            </div> -->
+          </div>
+        </div>
+        <!-- Contact Info & Form Scroll End-->
+
+        <!-- Contact Map Static Start -->
+        <div class="static contact-map fullheight">
+          <!-- Google Map Start -->
+          <div class="map">
+              <div class="content-block contact-us">
+                  <!-- Contact Form Content Start -->
+                  <div class="col-xs-12 form-container">
+                    <div class="col-sm-12 form-content">
+                      <!-- Reply Group Start -->
+                      <div class="reply-group">
+                        <i class="icon ion-ios-checkmark txt-light"></i>
+                        <p class="reply-group__title txt-light"><span>Done</span>!</p>
+                        <span class="reply-group__text txt-light-transparent"
+                          >Thanks for your message. We will get back as soon as
+                          possible.</span
+                        >
+                      </div>
+                      <!-- Reply Group End -->
+          <!-- Contact Form Content Content Start-->
+      <div class="popup-content">
+          <!-- Notify Title Start -->
+          <div class="popup-title" style="padding: 4.8rem 6.4rem 2.4rem 0rem">
+            <h4 class="title txt-light">Stay in touch</h4>
+            <p class="subtitle txt-light-transparent">
+              Want to know more about us, tell us about your project or just to
+              say hello? Drop us a line and we will get back as soon as possible.
+            </p>
+          </div>
+          <!-- Notify Title End -->
+                      <!-- Contact Form Start -->
+                      <form class="form form-light contact-form" id="contact-form">
+                        <!-- Hidden Required Fields -->
+                        <input
+                          type="hidden"
+                          name="project_name"
+                          value="Ramio Coming Soon Template"
+                        />
+                        <input
+                          type="hidden"
+                          name="admin_email"
+                          value="support@mixdesign.club"
+                        />
+                        <input
+                          type="hidden"
+                          name="form_subject"
+                          value="Contact Form Message"
+                        />
+                        <!-- END Hidden Required Fields-->
+        
+                        <input
+                          class=""
+                          type="text"
+                          name="Name"
+                          placeholder="Your Name*"
+                          required
+                        />
+                        <input
+                          class=""
+                          type="text"
+                          name="Company"
+                          placeholder="Company name"
+                          required
+                        />
+                        <input
+                          class=""
+                          type="email"
+                          name="E-mail"
+                          placeholder="Email Adress*"
+                        />
+                        <input
+                          class=""
+                          type="tel"
+                          name="Phone"
+                          placeholder="Phone Number*"
+                          required
+                        />
+                        <textarea
+                          class=""
+                          name="Message"
+                          placeholder="A Few Words*"
+                          required
+                        ></textarea>
+                        <span class="inputs-description">*Required fields</span>
+        
+                        <button class="btn btn-l btn-light">
+                          <span class="btn-caption">Send</span>
+                        </button>
+                      </form>
+                      <!-- Contact Form End -->
+                    </div>
+                  </div>
+                  <!-- Contact Form Content End -->
+                </div>
+            <!-- <div id="google-map">
+              <div id="google-container"></div>
+              <div id="zoom-in">
+                <span class="icon ion-plus"></span>
+              </div>
+              <div id="zoom-out">
+                <span class="icon ion-minus"></span>
+              </div>
+            </div> -->
+          </div>
+          <!-- Google Map End -->
+        </div>
+        <!-- Contact Map Static End-->
+      </div>
+    </section>
+    <!-- Contact Section End-->
+
+    <!-- Contact Form Section Start -->
+    <div class="writealine">
+      <!-- Close Button Start -->
+      <div class="popup-controls">
+        <a href="#0" id="writealine-close" class="section-close light">
+          <i class="icon ion-android-arrow-back"></i>
+        </a>
+      </div>
+      <!-- Close Button End -->
+
+      <!-- Contact Form Content Content Start-->
+      <div class="popup-content">
+        <!-- Notify Title Start -->
+        <div class="popup-title">
+          <h4 class="title txt-light">Stay in touch</h4>
+          <p class="subtitle txt-light-transparent">
+            Want to know more about us, tell us about your project or just to
+            say hello? Drop us a line and we will get back as soon as possible.
+
+          </p>
+        </div>
+        <!-- Notify Title End -->
+
+        <!-- Contact Form Block Start -->
+        <div class="content-block contact-us">
+          <!-- Contact Form Content Start -->
+          <div class="col-xs-12 form-container">
+            <div class="col-sm-12 form-content">
+              <!-- Reply Group Start -->
+              <div class="reply-group">
+                <i class="icon ion-ios-checkmark txt-light"></i>
+                <p class="reply-group__title txt-light"><span>Done</span>!</p>
+                <span class="reply-group__text txt-light-transparent"
+                  >Thanks for your message. We will get back as soon as
+                  possible.</span
+                >
+              </div>
+              <!-- Reply Group End -->
+
+              <!-- Contact Form Start -->
+              <form class="form form-light contact-form" id="contact-form">
+                <!-- Hidden Required Fields -->
+                <input
+                  type="hidden"
+                  name="project_name"
+                  value="Ramio Coming Soon Template"
+                />
+                <input
+                  type="hidden"
+                  name="admin_email"
+                  value="support@mixdesign.club"
+                />
+                <input
+                  type="hidden"
+                  name="form_subject"
+                  value="Contact Form Message"
+                />
+                <!-- END Hidden Required Fields-->
+
+                <input
+                  class=""
+                  type="text"
+                  name="Name"
+                  placeholder="Your Name*"
+                  required
+                />
+                <input
+                  class=""
+                  type="text"
+                  name="Company"
+                  placeholder="Company name"
+                  required
+                />
+                <input
+                  class=""
+                  type="email"
+                  name="E-mail"
+                  placeholder="Email Adress*"
+                />
+                <input
+                  class=""
+                  type="tel"
+                  name="Phone"
+                  placeholder="Phone Number*"
+                  required
+                />
+                <textarea
+                  class=""
+                  name="Message"
+                  placeholder="A Few Words*"
+                  required
+                ></textarea>
+                <span class="inputs-description">*Required fields</span>
+
+                <button class="btn btn-l btn-light">
+                  <span class="btn-caption">Send</span>
+                </button>
+              </form>
+              <!-- Contact Form End -->
+            </div>
+          </div>
+          <!-- Contact Form Content End -->
+        </div>
+        <!-- Contact Form Block End -->
+      </div>
+      <!-- Contact Form Content Content End-->
+    </div>
+    <!-- Contact Form Section End -->
+
+    <!-- Notify Section Start-->
+    <div class="notify">
+      <!-- Close Button Start -->
+      <div class="popup-controls">
+        <a href="#0" id="notify-close" class="section-close">
+          <i class="icon ion-android-arrow-back"></i>
+        </a>
+      </div>
+      <!-- Close Button End -->
+
+      <!-- Notify Content Start-->
+      <div class="popup-content">
+        <!-- Notify Title Start -->
+        <div class="popup-title">
+          <h4 class="title">Almost here!</h4>
+          <p class="subtitle">
+            Subscribe to our newsletter and we will send you a notification
+            about how to <span style="color: #333b8f; font-size: 2rem">Vote</span> for your favourite theme and the launch of our brand new site.
+          </p>
+        </div>
+        <!-- Notify Title End -->
+
+        <!-- Notify Form Container Start -->
+        <div class="content-block">
+          <div class="form-container">
+            <!-- Reply Messages Start-->
+            <div class="reply-group subscription-ok">
+              <i class="icon ion-ios-checkmark txt-accent-color"></i>
+              <p class="reply-group__title">Done!</p>
+              <span class="reply-group__text"
+                >Thanks for subscribing. We will send you a notification about
+                the launch of our brand new website.</span
+              >
+            </div>
+            <div class="reply-group subscription-error">
+              <i class="icon ion-sad txt-accent-color"></i>
+              <p class="reply-group__title">Ooops!</p>
+              <span class="reply-group__text"
+                >Something went wrong. Please try again later.</span
+              >
+            </div>
+            <!-- Reply Messages End-->
+
+            <!-- Notify Contact Form Start-->
+
+
+            <!-- mail chimp -->
+            <!--  -->
+            <!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://gmail.us3.list-manage.com/subscribe/post?u=12763dad521c00cd6a40fd2ad&amp;id=154bc57426" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_12763dad521c00cd6a40fd2ad_154bc57426" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+            <!-- <form class="notify-form form form-dark">
+              <input
+                class=""
+                type="email"
+                placeholder="Email Adress*"
+                required
+              />
+              <button class="btn btn-l btn-dark" type="submit">
+                <span class="btn-caption">Send</span>
+              </button>
+            </form> -->
+            <!-- Notify Contact Form End-->
+          </div>
+        </div>
+        <!-- Notify Form Container End -->
+      </div>
+      <!-- Notify Content End-->
+    </div>
+    <!-- Notify Section End-->
+
+    <!-- Custom HTML End-->
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <!-- Background of PhotoSwipe.
+      It's a separate element, as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <!--  Controls are self-explanatory. Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+
+            <button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"
+            ></button>
+
+            <button
+              class="pswp__button pswp__button--share"
+              title="Share"
+            ></button>
+
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"
+            ></button>
+
+            <button
+              class="pswp__button pswp__button--zoom"
+              title="Zoom in/out"
+            ></button>
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader--active when preloader is running -->
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+
+          <button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"
+          ></button>
+
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"
+          ></button>
+
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load Scripts Start-->
+    <script type="text/javascript" src="js/libs.min.js"></script>
+    <script type="text/javascript" src="js/gallery-init.js"></script>
+    <script type="text/javascript" src="js/ramio-custom.js"></script>
+    <!-- Load Scripts End-->
+  </body>
+</html>
