@@ -276,57 +276,56 @@ $(function() {
   // Custom Scrollbar End
   // --------------------------------------------- //
 
-  // --------------------------------------------- //
-  // Mailchimp Notify Form Start
-  // --------------------------------------------- //
-  $(".notify-form").ajaxChimp({
-    callback: mailchimpCallback,
-    url:
-      "https://besaba.us10.list-manage.com/subscribe/post?u=e8d650c0df90e716c22ae4778&amp;id=cda9d4d43c"
-  });
-  // 9cb1480011bb3f41d3e1e9644e926b89-us3
-  function mailchimpCallback(resp) {
-    if (resp.result === "success") {
-      $(".notify")
-        .find(".form")
-        .addClass("is-hidden");
-      $(".notify")
-        .find(".subscription-ok")
-        .addClass("is-visible");
-      setTimeout(function() {
-        // Done Functions
-        $(".notify")
-          .find(".subscription-ok")
-          .removeClass("is-visible");
-        $(".notify")
-          .find(".form")
-          .delay(300)
-          .removeClass("is-hidden");
-        $(".notify-form").trigger("reset");
-      }, 5000);
-    } else if (resp.result === "error") {
-      $(".notify")
-        .find(".form")
-        .addClass("is-hidden");
-      $(".notify")
-        .find(".subscription-error")
-        .addClass("is-visible");
-      setTimeout(function() {
-        // Done Functions
-        $(".notify")
-          .find(".subscription-error")
-          .removeClass("is-visible");
-        $(".notify")
-          .find(".form")
-          .delay(300)
-          .removeClass("is-hidden");
-        $(".notify-form").trigger("reset");
-      }, 5000);
-    }
-  }
-  // --------------------------------------------- //
-  // Mailchimp Notify Form End
-  // --------------------------------------------- //
+  // // --------------------------------------------- //
+  // // Mailchimp Notify Form Start
+  // // --------------------------------------------- //
+  // $(".notify-form").ajaxChimp({
+  //   callback: mailchimpCallback,
+  //   url:
+  //     "https://besaba.us10.list-manage.com/subscribe/post?u=e8d650c0df90e716c22ae4778&amp;id=cda9d4d43c"
+  // });
+  // function mailchimpCallback(resp) {
+  //   if (resp.result === "success") {
+  //     $(".notify")
+  //       .find(".form")
+  //       .addClass("is-hidden");
+  //     $(".notify")
+  //       .find(".subscription-ok")
+  //       .addClass("is-visible");
+  //     setTimeout(function() {
+  //       // Done Functions
+  //       $(".notify")
+  //         .find(".subscription-ok")
+  //         .removeClass("is-visible");
+  //       $(".notify")
+  //         .find(".form")
+  //         .delay(300)
+  //         .removeClass("is-hidden");
+  //       $(".notify-form").trigger("reset");
+  //     }, 5000);
+  //   } else if (resp.result === "error") {
+  //     $(".notify")
+  //       .find(".form")
+  //       .addClass("is-hidden");
+  //     $(".notify")
+  //       .find(".subscription-error")
+  //       .addClass("is-visible");
+  //     setTimeout(function() {
+  //       // Done Functions
+  //       $(".notify")
+  //         .find(".subscription-error")
+  //         .removeClass("is-visible");
+  //       $(".notify")
+  //         .find(".form")
+  //         .delay(300)
+  //         .removeClass("is-hidden");
+  //       $(".notify-form").trigger("reset");
+  //     }, 5000);
+  //   }
+  // }
+  // // --------------------------------------------- //
+  // // Mailchimp Notify Form End
+  // // --------------------------------------------- //
 
   // --------------------------------------------- //
   // Contact Form Start
