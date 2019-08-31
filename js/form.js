@@ -33,11 +33,12 @@ function submitForm(e) {
   // saves the message in firebase
   saveMessage(name, company, email, phone, subject);
   // show alert that message has been sent
-  document.getElementById("name").value = "";
-  document.getElementById("company").value = "";
-  document.getElementById("phone").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("subject").value = "";
+  document.getElementById("Name").value = "";
+  document.getElementById("Company").value = "";
+  document.getElementById("Phone").value = "";
+  document.getElementById("E-mail").value = "";
+  document.getElementById("Message").value =
+    "Thanks for Contacting we will get back to you :)";
 }
 // function to get form values
 function getValues(id) {
@@ -45,7 +46,7 @@ function getValues(id) {
 }
 
 //saves message to firebase
-function saveMessage(name, email, subject) {
+function saveMessage(name, email, phone, company, subject) {
   const newMessage = messagesRef.push();
   newMessage.set({
     name: name,
